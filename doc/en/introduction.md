@@ -4,14 +4,14 @@
 [![codecov](https://codecov.io/gh/openkruise/kruise-game/branch/master/graph/badge.svg)](https://codecov.io/gh/openkruise/kruise-game)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](./CODE_OF_CONDUCT.md)
 
-English | [Chinese](./doc/中文/说明文档.md)
+English | [Chinese](../中文/说明文档.md)
 ### Overview
 Currently, Kruise provides the capabilities of service quality detection and hot update. However, these capabilities are implemented in Kruise-daemon, and in the serverless scenario, Kruise-daemon cannot be used normally.
 Therefore, it is considered to implement the enhanced functions in the serverless game scenario through the sidecar mechanism. This sidecar contains multiple plugins that can solve different problems in the game scenario. It can be used by integrating this sidecar into the pod.
 In addition, the sidecar provides a complete and extensible plugin management mechanism, allowing you to easily add the plugins you need according to your own requirements.
 
 ### Sidecar Design Architecture
-![sidecar-struct](./doc/img/sidecar-struct.png)
+![sidecar-struct](../img/sidecar-struct.png)
 1. Create a ConfigMap to store the configurations required by each plugin in the sidecar. Each plugin can customize its own required configuration and store it in this ConfigMap.
 ```yaml
 apiVersion: v1
@@ -50,6 +50,6 @@ Currently, two plugins are preset, namely the hot update plugin and the service 
 * Service quality detection plugin: Supports the service quality detection of game servers and supports detecting the service quality of pods through HTTP.
 
 ### Next Steps
-* View [probe](./doc/en/user_manuals/probe.md) to use the service quality probe plugin.
-* View [Hot Update](./doc/en/user_manuals/probe.md) to use the hot update plugin. 
+* View [probe](./user_manuals/probe.md) to use the service quality probe plugin.
+* View [Hot Update](./user_manuals/probe.md) to use the hot update plugin. 
 
