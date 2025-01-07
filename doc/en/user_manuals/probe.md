@@ -49,11 +49,11 @@ data:
           startDelaySeconds: 10 # Detection start delay in seconds
           probeIntervalSeconds: 5 # Detection interval in seconds
         bootorder: 1
-    restartpolicy: Always
+    restartPolicy: Always
     resources:
       CPU: 100m
       Memory: 128Mi
-    sidecarstartorder: Before ## The startup order of the Sidecar, whether it is after or before the main container
+    sidecarStartOrder: Before ## The startup order of the Sidecar, whether it is after or before the main container
 ```
 
 ### Game Server YAML Example

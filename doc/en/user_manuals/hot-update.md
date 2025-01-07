@@ -45,11 +45,11 @@ data:
                 inKube:
                     annotationKey: sidecar.vke.volcengine.com/hot-update-result
                 type: InKube # The result is saved in the k8s resource
-    restartpolicy: Always
+    restartPolicy: Always
     resources:
         CPU: 100m
         Memory: 128Mi
-    sidecarstartorder: Before
+    sidecarStartOrder: Before
 ```
 
 ### Example YAML of Game Server
